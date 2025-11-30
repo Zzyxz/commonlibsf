@@ -23,12 +23,12 @@ namespace RE
         virtual void* SetLocalTransform(const NiTransform& transform);
 
         // members
-        BSTArray<NiPointer<NiAVObject>> children;   // 130
-        void*                           extraData;  // 138
-        std::uint32_t                   childCount; // 140
-        std::uint32_t                   flags;      // 144
-        std::uint64_t                   pad148;     // 148
-
+        BSTArray<NiPointer<NiAVObject>> children;
+        void*                           extraData;
+        std::uint32_t                   childCount;
+        std::uint32_t                   flags;
+        std::uint64_t                   pad148;
+        
         static_assert(sizeof(BSTArray<NiPointer<NiAVObject>>) == 0x8);
         static_assert(offsetof(NiNode, children) == 0x130);
         static_assert(offsetof(NiNode, extraData) == 0x138);
