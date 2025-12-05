@@ -320,6 +320,7 @@
 #include "RE/N/NiColor.h"
 #include "RE/N/NiFrustum.h"
 #include "RE/N/NiMatrix3.h"
+#include "RE/N/NiNode.h"
 #include "RE/N/NiObject.h"
 #include "RE/N/NiObjectNET.h"
 #include "RE/N/NiPoint.h"

@@ -6,34 +6,34 @@
 
 namespace RE
 {
-    class __declspec(novtable) NiNode :
-        public NiAVObject 
-    {
-    public:
-        SF_RTTI(NiNode);
+	class __declspec(novtable) NiNode :
+		public NiAVObject
+	{
+	public:
+		SF_RTTI(NiNode);
 
-        //add
-        virtual ~NiNode() = default;
-        virtual NiNode* GetAsNiNode();
-        virtual void* AddChild(NiAVObject* child);
-        virtual bool* RemoveChild(NiAVObject* child);
-        virtual NiAVObject* GetObjectByName(const BSFixedString& name);
-        virtual NiAVObject* FindObjectRecursive(const BSFixedString& name);
-        virtual NiTransform* GetLocalTransform();
-        virtual void* SetLocalTransform(const NiTransform& transform);
+		//add
+		virtual ~NiNode() = default;
+		virtual NiNode*      GetAsNiNode();
+		virtual void*        AddChild(NiAVObject* child);
+		virtual bool*        RemoveChild(NiAVObject* child);
+		virtual NiAVObject*  GetObjectByName(const BSFixedString& name);
+		virtual NiAVObject*  FindObjectRecursive(const BSFixedString& name);
+		virtual NiTransform* GetLocalTransform();
+		virtual void*        SetLocalTransform(const NiTransform& transform);
 
-        // members
-        BSTArray<NiPointer<NiAVObject>> children;
-        void*                           extraData;
-        std::uint32_t                   childCount;
-        std::uint32_t                   flags;
-        std::uint64_t                   pad148;
-        
-        static_assert(sizeof(BSTArray<NiPointer<NiAVObject>>) == 0x8);
-        static_assert(offsetof(NiNode, children) == 0x130);
-        static_assert(offsetof(NiNode, extraData) == 0x138);
-        static_assert(offsetof(NiNode, childCount) == 0x140);
-        static_assert(offsetof(NiNode, flags) == 0x144);
-        static_assert(sizeof(NiNode) == 0x150);
-    };
+		// members
+		BSTArray<NiPointer<NiAVObject>> children;
+		void*                           extraData;
+		std::uint32_t                   childCount;
+		std::uint32_t                   flags;
+		std::uint64_t                   pad148;
+
+		static_assert(sizeof(BSTArray<NiPointer<NiAVObject>>) == 0x8);
+		static_assert(offsetof(NiNode, children) == 0x130);
+		static_assert(offsetof(NiNode, extraData) == 0x138);
+		static_assert(offsetof(NiNode, childCount) == 0x140);
+		static_assert(offsetof(NiNode, flags) == 0x144);
+		static_assert(sizeof(NiNode) == 0x150);
+	};
 }
