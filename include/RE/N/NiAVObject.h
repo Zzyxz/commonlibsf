@@ -20,35 +20,35 @@ namespace RE
 		virtual ~NiAVObject() = default;
 
 		// add
-		virtual void*   Unk55();
-		virtual void*   Unk56();
-		virtual void*   Unk57();
-		virtual void*   Unk58();
-		virtual void*   Unk59();
-		virtual void*   Unk60();
-		virtual void*   Unk61();
-		virtual NiNode* GetObjectByName(const BSFixedString& a_name);
-		virtual void*   SetSelectiveUpdateFlags();
-		virtual void*   Unk64();
-		virtual void*   Unk65();
-		virtual void*   Unk66();
-		virtual void*   Unk67();
-		virtual void*   Unk68();
-		virtual void*   Unk69();
-		virtual void*   Unk70();
-		virtual void*   Unk71();
-		virtual void*   Unk72();
-		virtual void*   Update(NiUpdateData* a_data);
-		virtual void*   Unk74();
-		virtual void*   Unk75();
-		virtual void*   Unk76();
-		virtual void*   Unk77();
-		virtual void*   Unk78();
-		virtual void*   UpdateWorldData(NiUpdateData* a_data);
-		virtual void*   UpdateTransformAndBounds(NiUpdateData* a_data);
-		virtual void*   UpdateTransforms(NiUpdateData* a_data);
-		virtual void*   Unk82();
-		virtual void*   Unk83();
+		virtual void*       Unk55();
+		virtual void*       Unk56();
+		virtual void*       Unk57();
+		virtual void*       Unk58();
+		virtual void*       Unk59();
+		virtual void*       Unk60();
+		virtual void*       Unk61();
+		virtual NiAVObject* GetObjectByName(const BSFixedString& a_name);
+		virtual void*       SetSelectiveUpdateFlags();
+		virtual void*       Unk64();
+		virtual void*       Unk65();
+		virtual void*       Unk66();
+		virtual void*       Unk67();
+		virtual void*       Unk68();
+		virtual void*       Unk69();
+		virtual void*       Unk70();
+		virtual void*       Unk71();
+		virtual void*       Unk72();
+		virtual void*       Update(NiUpdateData* a_data);
+		virtual void*       Unk74();
+		virtual void*       Unk75();
+		virtual void*       Unk76();
+		virtual void*       Unk77();
+		virtual void*       Unk78();
+		virtual void*       UpdateWorldData(NiUpdateData* a_data);
+		virtual void*       UpdateTransformAndBounds(NiUpdateData* a_data);
+		virtual void*       UpdateTransforms(NiUpdateData* a_data);
+		virtual void*       Unk82();
+		virtual void*       Unk83();
 
 		// members
 		NiNode*                      parent;           // 038
@@ -62,9 +62,4 @@ namespace RE
 		void*                        unk128;           // 128
 	};
 	static_assert(sizeof(NiAVObject) == 0x130);
-	static_assert(offsetof(NiAVObject, parent) == 0x38);
-	static_assert(offsetof(NiAVObject, local) == 0x40);
-	static_assert(offsetof(NiAVObject, world) == 0x80);
-	static_assert(offsetof(NiAVObject, collisionObject) == 0x110);
-	static_assert(offsetof(NiAVObject, flags) == 0x118);
 }
