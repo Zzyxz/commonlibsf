@@ -64,10 +64,10 @@ namespace RE::GameScript
 			virtual void SerializeBody(Json::Value& r_val);  // 03 - { r_val.Value(0); return; }
 
 			// members
-			std::byte   command[0x20];  // 30 - std::string
-			std::byte   message[0x20];  // 50 - std::string
-			int         request_seq;    // 70
-			bool        success;        // 74
+			std::byte command[0x20];  // 30 - std::string
+			std::byte message[0x20];  // 50 - std::string
+			int       request_seq;    // 70
+			bool      success;        // 74
 		};
 		static_assert(sizeof(Response) == 0x78);
 
@@ -263,7 +263,7 @@ namespace RE::GameScript
 
 			struct Breakpoint
 			{
-				std::byte    source[0x20]; // std::string
+				std::byte    source[0x20];  // std::string
 				std::int32_t line;
 				bool         verified;
 			};
