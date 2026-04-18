@@ -92,7 +92,7 @@ namespace RE
 			}
 			using func_t = void (*)(const TESForm*, void**, std::uint32_t, const BSFixedString*);
 			static REL::Relocation<func_t> func{ RE::ID::FormComponentLookup::GetForForm };
-			void* out[2]{};
+			void*                          out[2]{};
 			func(a_form, out, 6, &GetComponentTypeName());
 			return static_cast<BGSQualityUpgradeFormComponent*>(out[0]);
 		}

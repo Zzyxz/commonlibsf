@@ -894,7 +894,7 @@ namespace RE::ID
 	//No RTTI for this, not sure what BGS Subsystem this likely belongs to? but lets us get a formcomponent
 	namespace FormComponentLookup
 	{
-		inline constexpr REL::ID GetForForm { 47393 };  // generic form-component lookup helper
+		inline constexpr REL::ID GetForForm{ 47393 };  // generic form-component lookup helper
 	}
 
 	namespace GameMenuBase
