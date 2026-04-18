@@ -55,6 +55,33 @@ namespace RE
 		return keywords.size();
 	}
 
+	bool RE::BGSKeywordForm::HasKeyword(BGSKeyword* keyword) const
+	{
+		if (!keyword) {
+			return false;
+		}
+
+		for (const auto& existing : keywords) {
+			if (existing == keyword) {
+				return true;
+			}
+		}
+
+		for (const auto& formFolderKeywordList : formFolderKeywordLists) {
+			if (!formFolderKeywordList) {
+				continue;
+			}
+
+			for (const auto& existing : formFolderKeywordList->keywords) {
+				if (existing == keyword) {
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
 	bool BGSKeywordForm::HasKeywordString(std::string_view a_editorID)
 	{
 		bool result{};
