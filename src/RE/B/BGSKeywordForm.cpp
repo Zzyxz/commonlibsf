@@ -94,7 +94,7 @@ namespace RE
 		return result;
 	}
 
-	bool RE::BGSKeywordForm::RemoveKeyword(RE::BGSKeyword* keyword)
+	bool BGSKeywordForm::RemoveKeyword(RE::BGSKeyword* keyword)
 	{
 		if (!keyword) {
 			return false;
