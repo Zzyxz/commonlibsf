@@ -23,12 +23,13 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
 		// add
-		virtual BGSKeyword* GetDefaultKeyword() const;  // 0B
-
+		virtual BGSKeyword*         GetDefaultKeyword() const;  // 0B
+		bool                        AddKeyword(RE::BGSKeyword* keyword);
 		[[nodiscard]] bool          ContainsKeywordString(std::string_view a_editorID);
 		void                        ForEachKeyword(std::function<BSContainer::ForEachResult(BGSKeyword*)> a_callback);
 		[[nodiscard]] std::uint32_t GetNumKeywords() const;
 		[[nodiscard]] bool          HasKeywordString(std::string_view a_editorID);
+		bool                        RemoveKeyword(RE::BGSKeyword* keyword);
 
 		// members
 		BSTArray<BGSFormFolderKeywordList*> formFolderKeywordLists;  // 10

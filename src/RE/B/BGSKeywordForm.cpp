@@ -4,6 +4,22 @@
 
 namespace RE
 {
+	bool RE::BGSKeywordForm::AddKeyword(RE::BGSKeyword* keyword)
+	{
+		if (!keyword) {
+			return false;
+		}
+
+		for (const auto& existing : keywords) {
+			if (existing == keyword) {
+				return false;
+			}
+		}
+
+		keywords.push_back(keyword);
+		return true;
+	}
+
 	bool BGSKeywordForm::ContainsKeywordString(std::string_view a_editorID)
 	{
 		bool result{};
@@ -49,5 +65,21 @@ namespace RE
 			return BSContainer::ForEachResult::kContinue;
 		});
 		return result;
+	}
+
+	bool RE::BGSKeywordForm::RemoveKeyword(RE::BGSKeyword* keyword)
+	{
+		if (!keyword) {
+			return false;
+		}
+
+		for (auto it = keywords.begin(); it != keywords.end(); ++it) {
+			if (*it == keyword) {
+				keywords.erase(it);
+				return true;
+			}
+		}
+
+		return false;
 	}
 }
