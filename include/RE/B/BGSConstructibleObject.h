@@ -13,9 +13,9 @@ namespace RE
 
 	class BGSConstructibleObject :
 		public BGSCraftableForm,        // 000
-		public BGSPickupPutdownSounds,  // 098
-		public TESValueForm,            // 100
-		public BGSCraftingUseSound      // 110
+		public BGSPickupPutdownSounds,  // 0A0
+		public TESValueForm,            // 108
+		public BGSCraftingUseSound      // 118
 	{
 	public:
 		SF_RTTI_VTABLE(BGSConstructibleObject);
@@ -33,15 +33,15 @@ namespace RE
 		~BGSConstructibleObject() override;  // 00
 
 		// members
-		std::byte                                                                       category[0x18];  // 148 - std::vector<BGSKeyword*, BSTHeapSTLAllocator<BGSKeyword, 2>
-		TESBoundObject*                                                                 unk160;          // 160
-		BGSCurveForm*                                                                   unk168;          // 168
-		TESGlobal*                                                                      buildLimit;      // 170
-		BSTArray<BSTTuple3<TESForm*, BGSCurveForm*, BGSTypedFormValuePair::SharedVal>>* unk178;          // 178
-		REX::TEnum<LEARN_METHOD, std::uint8_t>                                          learnMethod;     // 180
-		TESGlobal*                                                                      unk188;          // 188
-		BGSKeyword*                                                                     unk190;          // 190
-		std::uint32_t                                                                   unk198;          // 198
+		std::byte                                                                       category[0x18];  // 150 - std::vector<BGSKeyword*, BSTHeapSTLAllocator<BGSKeyword, 2>
+		TESBoundObject*                                                                 unk168;          // 168
+		BGSCurveForm*                                                                   unk170;          // 170
+		TESGlobal*                                                                      buildLimit;      // 178
+		BSTArray<BSTTuple3<TESForm*, BGSCurveForm*, BGSTypedFormValuePair::SharedVal>>* unk180;          // 180
+		REX::TEnum<LEARN_METHOD, std::uint8_t>                                          learnMethod;     // 188
+		TESGlobal*                                                                      unk190;          // 190
+		BGSKeyword*                                                                     unk198;          // 198
+		std::uint32_t                                                                   unk1A0;          // 1A0
 	};
 	static_assert(sizeof(BGSConstructibleObject) == 0x1A8);
 }

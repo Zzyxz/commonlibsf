@@ -15,8 +15,8 @@ namespace RE
 
 	class BGSCraftableForm :
 		public TESForm,         // 00
-		public TESDescription,  // 30
-		public TESFullName      // 48
+		public TESDescription,  // 38
+		public TESFullName      // 50
 	{
 	public:
 		SF_RTTI_VTABLE(BGSCraftableForm);
@@ -27,14 +27,14 @@ namespace RE
 		virtual void Unk_62();  // 62
 
 		// members
-		BGSKeyword*                                                                     benchKeyword;   // 58
-		TESCondition                                                                    conditions;     // 60
-		BSTArray<BSTTuple3<TESForm*, BGSCurveForm*, BGSTypedFormValuePair::SharedVal>>* components;     // 70
-		BSTArray<BSTTuple3<TESForm*, BGSCurveForm*, BGSTypedFormValuePair::SharedVal>>* requiredPerks;  // 78
-		TESForm*                                                                        createdObject;  // 80
-		std::uint8_t                                                                    unk88;          // 88
-		float                                                                           menuSortOrder;  // 8C
+		BGSKeyword*                                                                     benchKeyword;   // 60
+		TESCondition                                                                    conditions;     // 68
+		BSTArray<BSTTuple3<TESForm*, BGSCurveForm*, BGSTypedFormValuePair::SharedVal>>* components;     // 78
+		BSTArray<BSTTuple3<TESForm*, BGSCurveForm*, BGSTypedFormValuePair::SharedVal>>* requiredPerks;  // 80
+		TESForm*                                                                        createdObject;  // 88
 		std::uint8_t                                                                    unk90;          // 90
+		float                                                                           menuSortOrder;  // 94
+		std::uint8_t                                                                    unk98;          // 98
 	};
 	static_assert(sizeof(BGSCraftableForm) == 0xA0);
 }
