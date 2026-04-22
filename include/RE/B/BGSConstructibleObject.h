@@ -44,4 +44,8 @@ namespace RE
 		std::uint32_t                                                                   unk1A0;          // 1A0
 	};
 	static_assert(sizeof(BGSConstructibleObject) == 0x1A8);
+	static_assert(offsetof(BGSConstructibleObject, pickupSound) == 0xA8);        // BGSPickupPutdownSounds base @ +0x0A0
+	static_assert(offsetof(BGSConstructibleObject, value) == 0x110);             // TESValueForm base @ +0x108
+	static_assert(offsetof(BGSConstructibleObject, craftingUseSound) == 0x120);  // BGSCraftingUseSound base @ +0x118
+	static_assert(offsetof(BGSConstructibleObject, category) == 0x150);          // first derived member
 }

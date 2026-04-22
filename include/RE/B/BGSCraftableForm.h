@@ -37,4 +37,8 @@ namespace RE
 		std::uint8_t                                                                    unk98;          // 98
 	};
 	static_assert(sizeof(BGSCraftableForm) == 0xA0);
+	static_assert(offsetof(BGSCraftableForm, unk18) == 0x18);         // TESForm base @ +0x00
+	static_assert(offsetof(BGSCraftableForm, fileOffset) == 0x40);    // TESDescription base @ +0x38
+	static_assert(offsetof(BGSCraftableForm, fullName) == 0x58);      // TESFullName base @ +0x50
+	static_assert(offsetof(BGSCraftableForm, benchKeyword) == 0x60);  // first derived member
 }
